@@ -28,14 +28,7 @@ pipeline {
 						bat 'mvn clean test -Dsuite=testng.xml'
 					}
 					
-                    # try {
-                    #    bat 'mvn clean test -Dsuite=testng.xml'
-                    #}catch (e){
-                    #    
-                    #}
                 }
-                
-                
             }
         }
         
