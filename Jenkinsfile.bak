@@ -24,15 +24,11 @@ pipeline {
                 
                 script {
                     
-					catchError {
-						bat 'mvn clean test -Dsuite=testng.xml'
-					}
-					
-                    # try {
-                    #    bat 'mvn clean test -Dsuite=testng.xml'
-                    #}catch (e){
-                    #    
-                    #}
+                    try {
+                        bat 'mvn clean test -Dsuite=testng.xml'
+                    }catch (e){
+                        echo "test failure occurs"
+                    }
                 }
                 
                 

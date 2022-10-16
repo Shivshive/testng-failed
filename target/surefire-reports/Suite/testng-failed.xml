@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.Test1">
         <methods>
-          <include name="test1_sample"/>
+          <include name="intentionalFail"/>
         </methods>
       </class> <!-- tests.Test1 -->
     </classes>

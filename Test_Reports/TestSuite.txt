@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.259 s <<< FAILURE! - in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.257 s <<< FAILURE! - in TestSuite
 tests.Test1.intentionalFail  Time elapsed: 0.005 s  <<< FAILURE!
 java.lang.AssertionError: 
 	at tests.Test1.intentionalFail(Test1.java:19)
