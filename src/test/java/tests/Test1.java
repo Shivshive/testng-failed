@@ -12,5 +12,11 @@ public class Test1 {
 		System.out.println("Running Test 1 test1_sample method");
 		AssertJUnit.assertTrue(true);
 	}
+	
+	@Test
+	public void intentionalFail() {
+		System.out.println("Running Test 1 intentionalFail method");
+		AssertJUnit.assertTrue(false);
+	}
 
 }
