@@ -24,7 +24,7 @@ pipeline {
                 
                 script {
                     
-					catchError {
+					catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
 						bat 'mvn clean test -Dsuite=testng.xml'
 					}
 					

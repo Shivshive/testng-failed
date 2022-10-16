@@ -24,12 +24,11 @@ pipeline {
                 
                 script {
                     
-					catchError {
+					catchError(buildResult : Failure) {
 						bat 'mvn clean test -Dsuite=testng.xml'
 					}
 					
                 }
-                
             }
         }
         
