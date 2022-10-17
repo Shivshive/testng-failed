@@ -6,8 +6,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<timestamp>${maven.build.timestamp}</timestamp>
-		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+		<report_output_dir>${reportoutput_dir}</report_output_dir>
 	</properties>
 	<build>
 		<plugins>
@@ -23,7 +22,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/Test_Reports</outputDirectory>
+							<outputDirectory>${basedir}/Test_Reports/${report_output_dir}</outputDirectory>
 							<resources>
 								<resource>
 									<directory>${basedir}/target/surefire-reports</directory>

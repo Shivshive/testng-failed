@@ -4,6 +4,7 @@ pipeline {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "3.8.6"
     }
+
     stages {   
         stage('checkout') {
             steps {
@@ -25,7 +26,7 @@ pipeline {
                 script {
                     
 					catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-						bat 'mvn clean test -Dsuite=testng.xml'
+						bat 'mvn clean test -Dsuite=testng.xml -Dreportoutput_dir=${env.BUILD_NUMBER}_s'
 					}
 					
                 }
@@ -41,7 +42,7 @@ pipeline {
             }
             
             steps{
-                bat 'mvn test -Dsuite=target/surefire-reports/testng-failed.xml'
+                bat 'mvn test -Dsuite=target/surefire-reports/testng-failed.xml -Dreportoutput_dir=${env.BUILD_NUMBER}_rr'
             }
         }
     }
